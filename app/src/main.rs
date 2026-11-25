@@ -564,6 +564,28 @@ impl App {
 }
 
 fn main() {
+    let args: Vec<String> = std::env::args().collect();
+
+    if args.len() > 1 {
+        match args[1].as_str() {
+            "--begin" => {}
+            "--help" | "-h" => {
+                println!("HERCULES Antivirus");
+                println!();
+                println!("Usage:");
+                println!("  hercules          Start Hercules Antivirus");
+                println!("  hercules --begin  Start Hercules Antivirus");
+                println!("  hercules --help   Show this help message");
+                return;
+            }
+            _ => {
+                println!("{}Unknown argument: {}{}", RED, args[1], RESET);
+                println!("Run 'hercules --help' for usage.");
+                return;
+            }
+        }
+    }
+
     let app = App::new();
     app.run();
 }
