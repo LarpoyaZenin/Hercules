@@ -68,7 +68,7 @@ The app detects the standard EICAR test file. To verify it works:
 
 ```bash
 # Create an EICAR test file (harmless test string)
-printf 'X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' > /tmp/eicar.txt
+printf 'X5O!P%%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' > /tmp/eicar.txt
 
 # Run Hercules and select Custom Scan (option 3), then enter the path /tmp/eicar.txt
 ```
